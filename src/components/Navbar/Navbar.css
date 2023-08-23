@@ -1,0 +1,39 @@
+nav {
+  background-color: #70a288;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+.carticon {
+  width: 2.3vw;
+  margin-left: 1rem;
+}
+ul {
+  list-style: none;
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+}
+.header__logo {
+  width: 13vw;
+  margin-left: 1rem;
+}
+
+ul li {
+  font-size: 1.3rem;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 8px 12px 8px 12px;
+  margin: 6px;
+}
+
+ul li:hover {
+  background-color: #476c9b;
+  color: white;
+  opacity: 1;
+  transition-duration: 700ms;
+  transform: scale(1);
+}
