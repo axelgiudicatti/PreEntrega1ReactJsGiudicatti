@@ -8,7 +8,7 @@ const Navbar = () => {
         <img className="header__logo" src="/logo face.webp" />
       </li>
       <ul>
-        <li> Latas</li>
+        <li> Latas </li>
         <li> Barriles</li>
         <li> Beertruck</li>
         <li>
