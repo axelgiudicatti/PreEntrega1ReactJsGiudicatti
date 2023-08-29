@@ -1,13 +1,17 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import "../Cards/Cards.css";
+import "./Item.css";
 
 function Cards(props) {
   return (
-    <Card className="card mb-2 color--green" style={{ width: "23.5%" }}>
+    <Card
+      key={props.id}
+      className="card mb-2 color--green"
+      style={{ width: "23.5%" }}
+    >
       <Card.Img variant="top" src={props.foto} />
       <Card.Body className="cardbody">
-        <h2 className="text-light">{props.estilo}</h2>
+        <h3 className="text-light">{props.estilo}</h3>
         <p className="text-light">
           IBU: {props.IBU} | Alc: {props.Alc} || SRM: {props.SRM}
         </p>

@@ -30,8 +30,8 @@ input {
 input::placeholder {
   color: white;
 }
-.tarjetas h2 {
-  font-size: 1.4rem;
+.tarjetas h3 {
+  font-size: 1.6rem;
   line-height: 1.5;
   text-align: start;
 }
