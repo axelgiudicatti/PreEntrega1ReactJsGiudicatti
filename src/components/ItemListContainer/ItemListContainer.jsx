@@ -1,13 +1,13 @@
-import Cards from "./Item";
+import Item from "../Item/Item";
 import { mFetch } from "../../utils/mockFetch";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = () => {
   const [birras, setBirras] = useState([]);
   const [loading, setLoading] = useState([true]);
   const { cid } = useParams();
-  console.log(cid);
 
   useEffect(() => {
     if (cid) {
@@ -27,7 +27,7 @@ const ItemListContainer = () => {
 
   return (
     <div className="tarjetas">
-      {loading ? <h2> Loading...</h2> : birras.map((birra) => Cards(birra))}
+      {loading ? <h2> Loading...</h2> : <ItemList birras={birras} />}
     </div>
   );
 };

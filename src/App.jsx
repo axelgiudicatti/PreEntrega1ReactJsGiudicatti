@@ -3,10 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "typeface-quicksand";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Cards from "./components/ItemListContainer/Item";
 import Navbar from "./components/Navbar/Navbar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import ItemCount from "./components/Counter/ItemCount";
 
 function App() {
   const onAdd = (count) => {

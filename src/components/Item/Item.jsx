@@ -3,18 +3,18 @@ import Card from "react-bootstrap/Card";
 import "./Item.css";
 import { useState } from "react";
 
-function Cards(props) {
+const Item = ({ birra }) => {
   return (
     <Card
-      key={props.id}
+      key={birra.id}
       className="card mb-2 color--green"
       style={{ width: "23vw" }}
     >
-      <Card.Img variant="top" src={props.foto} />
+      <Card.Img variant="top" src={birra.foto} />
       <Card.Body className="cardbody">
-        <h3 className="text-light">{props.estilo}</h3>
+        <h3 className="text-light">{birra.estilo}</h3>
         <p className="text-light">
-          IBU: {props.IBU} | Alc: {props.Alc} || SRM: {props.SRM}
+          IBU: {birra.IBU} | Alc: {birra.Alc} || SRM: {birra.SRM}
         </p>
         <input
           onChange={(e) => setCantidad(e.target.value)}
@@ -27,6 +27,6 @@ function Cards(props) {
       </Card.Body>
     </Card>
   );
-}
+};
 
-export default Cards;
+export default Item;
