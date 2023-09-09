@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import "./ItemCount.css";
 const useCounter = (min, max) => {
   const [count, setCount] = useState(min);
 
@@ -28,10 +28,17 @@ const ItemCount = ({ initial, stock, onAdd }) => {
     onAdd(count);
   };
   return (
-    <div>
-      <button onClick={handleAdd}> + </button>
-      <label>{count}</label>
-      <button onClick={handleSubstract}>-</button>
+    <div className="itemcount">
+      <button className="color--state-bad mini" onClick={handleSubstract}>
+        -
+      </button>
+      <label>{count} Unidades</label>
+      <button className="color--state-ok mini" onClick={handleAdd}>
+        +
+      </button>
+      <button className="color--state-green mini" onClick={() => onAdd(count)}>
+        Agregar al carrito
+      </button>
     </div>
   );
 };

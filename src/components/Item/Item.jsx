@@ -1,29 +1,21 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 import "./Item.css";
 import { useState } from "react";
 
 const Item = ({ birra }) => {
   return (
-    <Card
-      key={birra.id}
-      className="card mb-2 color--green"
-      style={{ width: "23vw" }}
-    >
+    <Card className="card mb-2 color--green" style={{ width: "23vw" }}>
       <Card.Img variant="top" src={birra.foto} />
       <Card.Body className="cardbody">
-        <h3 className="text-light">{birra.estilo}</h3>
+        <h3 className="text-light ">{birra.estilo}</h3>
         <p className="text-light">
-          IBU: {birra.IBU} | Alc: {birra.Alc} || SRM: {birra.SRM}
+          Precio: {birra.price} || Stock: {birra.stock}
         </p>
-        <input
-          onChange={(e) => setCantidad(e.target.value)}
-          className="cantidad"
-          type="number"
-          name="cantidad"
-          placeholder="Ingresa la cantidad "
-        />
-        <Button className="button color--state-ok">Agregar</Button>
+        <Link className="button color--state-ok" to={`/detalle/${birra.id}`}>
+          <Button className="button color--state-ok">Detalles</Button>
+        </Link>
       </Card.Body>
     </Card>
   );

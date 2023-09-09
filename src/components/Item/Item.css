@@ -49,6 +49,7 @@ input::placeholder {
 .color--state-bad {
   background-color: #984447;
 }
+
 .button {
   border-radius: 0.8rem;
   border: none;
@@ -56,6 +57,7 @@ input::placeholder {
   color: white;
   text-align: center;
 }
+
 .button:hover {
   opacity: 0.85;
   background-color: #2b8b34;

@@ -5,17 +5,17 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar/Navbar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemCount from "./components/Counter/ItemCount";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
-  const onAdd = (count) => {
-    console.log(count);
-  };
   return (
     <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/category/:cid" element={<ItemListContainer />} />
+        <Route path="/detalle/:pid" element={<ItemDetailContainer />} />
       </Routes>
     </Router>
   );
