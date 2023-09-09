@@ -36,11 +36,11 @@
 
 .tarjetas {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-;
+  flex-wrap: wrap;
   padding: 1.4% 0.7% 10% 0.7%;
   background-image: url(/estilos.webp);
-  background-size: 175vh;
-  height: 35rem;
+  background-size: 275vh;
 }
 .tarjetas h2 {
   font-size: 5rem;

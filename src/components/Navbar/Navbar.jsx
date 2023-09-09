@@ -1,20 +1,30 @@
+import { Link } from "react-router-dom";
 import "../Navbar/Navbar.css";
 import CartWidget from "./CartWidget/CartWidget";
 
 const Navbar = () => {
   return (
     <nav>
-      <li>
-        <img className="header__logo" src="/logo face.webp" />
-      </li>
-      <ul>
-        <li> Latas </li>
-        <li> Barriles</li>
-        <li> Beertruck</li>
+      <Link to="/">
         <li>
-          12
-          <CartWidget />
+          <img className="header__logo" src="/logo face.webp" />
         </li>
+      </Link>
+      <ul>
+        <Link to="/category/LATAS">
+          <li> Latas </li>
+        </Link>
+        <Link to="/category/BARRILES">
+          <li> Barriles</li>
+        </Link>
+
+        <li> Beertruck</li>
+        <Link to="/cart">
+          <li>
+            12
+            <CartWidget />
+          </li>
+        </Link>
       </ul>
     </nav>
   );

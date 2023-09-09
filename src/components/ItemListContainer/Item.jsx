@@ -1,13 +1,14 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "./Item.css";
+import { useState } from "react";
 
 function Cards(props) {
   return (
     <Card
       key={props.id}
       className="card mb-2 color--green"
-      style={{ width: "23.5%" }}
+      style={{ width: "23vw" }}
     >
       <Card.Img variant="top" src={props.foto} />
       <Card.Body className="cardbody">
@@ -16,6 +17,7 @@ function Cards(props) {
           IBU: {props.IBU} | Alc: {props.Alc} || SRM: {props.SRM}
         </p>
         <input
+          onChange={(e) => setCantidad(e.target.value)}
           className="cantidad"
           type="number"
           name="cantidad"
