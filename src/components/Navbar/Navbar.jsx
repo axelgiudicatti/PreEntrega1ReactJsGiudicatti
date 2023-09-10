@@ -17,8 +17,9 @@ const Navbar = () => {
         <Link to="/category/BARRILES">
           <li> Barriles</li>
         </Link>
-
-        <li> Beertruck</li>
+        <Link to="/category/BEERTRUCKS">
+          <li> Beertruck</li>
+        </Link>
         <Link to="/cart">
           <li>
             12

@@ -103,11 +103,37 @@ const birras = [
     SRM: 32,
     foto: "/barriles.webp",
   },
+  {
+    id: 9,
+    category: "BEERTRUCKS",
+    description:
+      " 2 canillas a elección, y la mejor onda. El precio incluye todo lo necesario para el evento, te lo llevamos, lo instalamos y listo ! Lo buscamos al día siguiente, así que tomá tranquilo. Nosotros nos ocupamos. ",
+    estilo: "Doble canilla",
+    price: 50000,
+    stock: "a coordinar",
+    IBU: "variable",
+    Alc: "MUCHO",
+    SRM: "N/C",
+    foto: "/beertruck2.jpg",
+  },
+  {
+    id: 10,
+    category: "BEERTRUCKS",
+    description:
+      " 4 canillas a elección, y la mejor onda. Subite a la BIRRONETA elgida por Scaloni. El precio incluye todo lo necesario para el evento, te lo llevamos, lo instalamos y listo ! Lo buscamos al día siguiente, así que tomá tranquilo. Nosotros nos ocupamos. (NO INCLUYE LA COPA DEL MUNDO)",
+    estilo: "Cuadrúple canilla",
+    price: 95000,
+    stock: "a coordinar",
+    IBU: "variable",
+    Alc: "MUCHO",
+    SRM: "N/C",
+    foto: "/beertruck2.jpg",
+  },
 ];
 
 export const mFetch = (pid) =>
   new Promise((res, rej) => {
     setTimeout(() => {
-      res(pid ? birras.find((birra) => (birra.id = pid)) : birras);
+      res(pid ? birras.find((birra) => birra.id == pid) : birras);
     }, 1500);
   });

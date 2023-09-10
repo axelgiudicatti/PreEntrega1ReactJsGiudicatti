@@ -1,4 +1,3 @@
-import Item from "../Item/Item";
 import { mFetch } from "../../utils/mockFetch";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";

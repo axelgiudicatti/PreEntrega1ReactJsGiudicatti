@@ -33,6 +33,12 @@ h2 {
 
 .description p {
   width: 60vw;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   text-align: justify;
+}
+
+.lineardetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

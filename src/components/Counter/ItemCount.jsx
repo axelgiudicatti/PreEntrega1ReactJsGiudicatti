@@ -28,14 +28,16 @@ const ItemCount = ({ initial, stock, onAdd }) => {
     onAdd(count);
   };
   return (
-    <div className="itemcount">
-      <button className="color--state-bad mini" onClick={handleSubstract}>
-        -
-      </button>
-      <label>{count} Unidades</label>
-      <button className="color--state-ok mini" onClick={handleAdd}>
-        +
-      </button>
+    <div className="onAdd">
+      <div className="itemcount">
+        <button className="color--state-bad mini" onClick={handleSubstract}>
+          -
+        </button>
+        <label>{count} Unidades</label>
+        <button className="color--state-ok mini" onClick={handleAdd}>
+          +
+        </button>
+      </div>
       <button className="color--state-green mini" onClick={() => onAdd(count)}>
         Agregar al carrito
       </button>

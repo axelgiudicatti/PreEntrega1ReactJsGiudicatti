@@ -4,6 +4,9 @@ import ItemCount from "../Counter/ItemCount";
 import "./ItemDetail.css";
 
 const ItemDetail = ({ birra }) => {
+  const onAdd = (count) => {
+    console.log("cantidad seleccionada " + count);
+  };
   return (
     <div className="itemdetail">
       <h2> Detalles del producto</h2>
@@ -11,8 +14,14 @@ const ItemDetail = ({ birra }) => {
         <img src={birra.foto} />
         <p>{birra.description}</p>
       </div>
-      <h4>{birra.estilo}</h4>
-      <h4>{birra.price}/lata</h4>
+      <div className="lineardetail">
+        <h4>{birra.estilo}</h4>
+        <h4>IBU: {birra.IBU}</h4>
+        <h4>Alc: {birra.Alc}</h4>
+        <h4>SRM: {birra.SRM}</h4>
+        <h4>{birra.price}/lata</h4>
+        <ItemCount initial={0} stock={15} onAdd={onAdd} />
+      </div>
     </div>
   );
 };
