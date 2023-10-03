@@ -20,7 +20,7 @@ const ItemDetail = ({ birra }) => {
         <h4>Alc: {birra.Alc}</h4>
         <h4>SRM: {birra.SRM}</h4>
         <h4>{birra.price}/lata</h4>
-        <ItemCount initial={0} stock={15} onAdd={onAdd} />
+        <ItemCount initial={0} stock={birra.stock} onAdd={onAdd} />
       </div>
     </div>
   );

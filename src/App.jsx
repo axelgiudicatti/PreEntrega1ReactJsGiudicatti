@@ -5,7 +5,6 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar/Navbar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import ItemCount from "./components/Counter/ItemCount";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import CartContainer from "./components/CartContainer/CartContainer";
 

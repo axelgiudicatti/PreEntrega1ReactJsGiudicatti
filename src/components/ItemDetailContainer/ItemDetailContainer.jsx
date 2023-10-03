@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { mFetch } from "../../utils/mockFetch";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import ItemCount from "../Counter/ItemCount";
 
 const ItemDetailContainer = () => {
   const [birra, setBirra] = useState({});
