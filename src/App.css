@@ -34,7 +34,7 @@
   color: #888;
 }
 
-.tarjetas {
+.cards {
   display: flex;
   justify-content: space-;
   flex-wrap: wrap;
@@ -42,7 +42,7 @@
   background-image: url(/estilos.webp);
   background-size: 275vh;
 }
-.tarjetas h2 {
+.cards h2 {
   font-size: 5rem;
   margin-top: 5rem;
 }

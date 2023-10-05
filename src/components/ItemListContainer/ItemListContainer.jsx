@@ -1,32 +1,36 @@
-import { mFetch } from "../../utils/mockFetch";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  query,
+  where,
+} from "firebase/firestore";
 
 const ItemListContainer = () => {
-  const [birras, setBirras] = useState([]);
+  const [beers, setbeers] = useState([]);
   const [loading, setLoading] = useState([true]);
   const { cid } = useParams();
 
   useEffect(() => {
-    if (cid) {
-      mFetch()
-        .then((respuesta) =>
-          setBirras(respuesta.filter((birra) => cid == birra.category))
-        )
-        .catch((err) => console.log(err))
-        .finally(() => setLoading(false));
-    } else {
-      mFetch()
-        .then((respuesta) => setBirras(respuesta))
-        .catch((err) => console.log(err))
-        .finally(() => setLoading(false));
-    }
+    const db = getFirestore();
+    const queryCollection = collection(db, "PFReactJSGiudicatti");
+    const queryFilter = cid
+      ? query(queryCollection, where("category", "==", cid))
+      : queryCollection;
+    getDocs(queryFilter)
+      .then((resp) =>
+        setbeers(resp.docs.map((prod) => ({ id: prod.id, ...prod.data() })))
+      )
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false));
   }, [cid]);
 
   return (
-    <div className="tarjetas">
-      {loading ? <h2> Loading...</h2> : <ItemList birras={birras} />}
+    <div className="cards">
+      {loading ? <h2> Loading...</h2> : <ItemList beers={beers} />}
     </div>
   );
 };

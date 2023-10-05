@@ -1,20 +1,23 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { mFetch } from "../../utils/mockFetch";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
-  const [birra, setBirra] = useState({});
+  const [beer, setBeer] = useState({});
   const { pid } = useParams();
   useEffect(() => {
-    mFetch(Number(pid))
-      .then((resp) => setBirra(resp))
+    const db = getFirestore();
+    const queryDoc = doc(db, "PFReactJSGiudicatti", pid);
+    getDoc(queryDoc)
+      .then((resp) => ({ id: resp.id, ...resp.data() }))
+      .then((resp) => setBeer(resp))
       .catch((err) => console.log(err));
   }, []);
   return (
     <div>
-      <ItemDetail birra={birra} />
+      <ItemDetail beer={beer} />
     </div>
   );
 };

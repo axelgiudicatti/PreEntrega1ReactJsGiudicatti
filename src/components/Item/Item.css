@@ -30,7 +30,7 @@ input {
 input::placeholder {
   color: white;
 }
-.tarjetas h3 {
+.cards h3 {
   font-size: 1.6rem;
   line-height: 1.5;
   text-align: start;
@@ -60,7 +60,6 @@ input::placeholder {
 
 .button:hover {
   opacity: 0.85;
-  background-color: #2b8b34;
   transition-duration: 700ms;
   transform: scale(1);
 }

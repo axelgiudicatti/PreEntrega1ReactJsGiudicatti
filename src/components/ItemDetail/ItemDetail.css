@@ -41,4 +41,16 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2%;
+}
+
+.button {
+  margin-left: 10px;
+}
+
+.selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2%;
 }
