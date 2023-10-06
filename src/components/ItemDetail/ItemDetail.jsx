@@ -1,8 +1,8 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 import ItemCount from "../Counter/ItemCount";
-import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./ItemDetail.css";
 
 const ItemDetail = ({ beer }) => {

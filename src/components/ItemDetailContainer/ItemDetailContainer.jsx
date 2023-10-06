@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
       .then((resp) => ({ id: resp.id, ...resp.data() }))
       .then((resp) => setBeer(resp))
       .catch((err) => console.log(err));
-  }, []);
+  }, [pid]);
   return (
     <div>
       <ItemDetail beer={beer} />

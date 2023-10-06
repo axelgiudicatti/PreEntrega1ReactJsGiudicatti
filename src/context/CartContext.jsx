@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState } from "react";
 
 const CartContext = createContext([]);
@@ -7,12 +8,20 @@ export const useCartContext = () => useContext(CartContext);
 export const CartContextProvider = ({ children }) => {
   const [cartList, setCartList] = useState([]);
 
-  const isBeer = (id) => cartList.findIndex((beer) => beer.id === id);
+  const isBeer = (id) => cartList.find((beer) => beer.id === id);
 
   const addBeer = (newBeer) => {
     const index = isBeer(newBeer.id);
-    if (index !== -1) {
-      cartList[index].quantity += newBeer.quantity;
+    if (index) {
+      setCartList(
+        cartList.map((item) => {
+          if (item.id === newBeer.id) {
+            return { ...item, quantity: item.quantity + newBeer.quantity };
+          } else {
+            return item;
+          }
+        })
+      );
     } else {
       setCartList([...cartList, newBeer]);
     }
