@@ -15,6 +15,8 @@ Casi la totalidad del estilizado fue hecha con CSS
 
 La aplicación web fue deployada a partir del repositorio en GitHub y se encuentra alojada en el link:
 
+https://main--delightful-rugelach-62dd35.netlify.app/
+
 Dependencias empleadas:
 "@fortawesome/fontawesome-svg-core": "^6.4.2",
 "@fortawesome/free-solid-svg-icons": "^6.4.2",
