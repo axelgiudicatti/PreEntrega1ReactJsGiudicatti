@@ -1,10 +1,18 @@
 import { useCounter } from "../hooks/useCounter";
+import Swal from "sweetalert2";
 import "./ItemCount.css";
 
 const ItemCount = ({ initial, stock, onAdd }) => {
   const { count, handleAdd, handleSubstract } = useCounter(initial, stock);
   const handleOnAdd = () => {
     onAdd(count);
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Producto agregado al carrito",
+      showConfirmButton: false,
+      timer: 2000,
+    });
   };
   return (
     <div className="onAdd">

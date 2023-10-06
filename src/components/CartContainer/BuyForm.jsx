@@ -9,7 +9,7 @@ export const BuyForm = (handleAddOrder, handleOnChange, dataForm) => {
         onChange={handleOnChange}
       />
       <input
-        type="text"
+        type="number"
         name="phone"
         placeholder="ingresa tu teléfono"
         value={dataForm.phone}

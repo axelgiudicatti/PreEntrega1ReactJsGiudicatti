@@ -1,7 +1,6 @@
 import { useCartContext } from "../../context/CartContext";
 import { CartList } from "./CartList";
 import { FormHandlers } from "./FormHandlers";
-
 import { Link } from "react-router-dom";
 import { BuyForm } from "./BuyForm";
 import "./CartContainer.css";
@@ -9,7 +8,6 @@ import "./CartContainer.css";
 const CartContainer = () => {
   const { handleAddOrder, handleOnChange, dataForm, id } = FormHandlers();
   const { cartList } = useCartContext();
-
   return (
     <>
       {id !== "" && (

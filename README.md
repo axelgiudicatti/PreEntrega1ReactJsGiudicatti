@@ -29,5 +29,6 @@ Dependencias empleadas:
 "react-icons": "^4.10.1",
 "react-router-dom": "^6.15.0",
 "typeface-quicksand": "^1.1.13"
+"sweetalert2": "^11.7.32",
 
 Axel Giudcatti, axel.giudicatti@gmail.com. ig: @axelgiudicatti, linkedin: Axel Giudicatti, X: Axel Giudicatti
