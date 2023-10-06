@@ -11,6 +11,8 @@ La pagina construida se trata de un e-commerce. La pagina es practicamente dinam
 Al finalizar la compra, se envia a la base de datos un detalle del pedido que incluye el ID del mismo, los datos del comprador y la totalidad del monto abonado.
 El usuario recibe en pantalla la información de ID correspondiente a su pedido.
 
+Casi la totalidad del estilizado fue hecha con CSS
+
 La aplicación web fue deployada a partir del repositorio en GitHub y se encuentra alojada en el link:
 
 Dependencias empleadas:
@@ -25,3 +27,5 @@ Dependencias empleadas:
 "react-icons": "^4.10.1",
 "react-router-dom": "^6.15.0",
 "typeface-quicksand": "^1.1.13"
+
+Axel Giudcatti, axel.giudicatti@gmail.com. ig: @axelgiudicatti, linkedin: Axel Giudicatti, X: Axel Giudicatti
