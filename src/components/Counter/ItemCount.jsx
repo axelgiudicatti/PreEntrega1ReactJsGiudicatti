@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./ItemCount.css";
 import { useCounter } from "../hooks/useCounter";
+
 const ItemCount = ({ initial, stock, onAdd }) => {
   const { count, handleAdd, handleSubstract } = useCounter(initial, stock);
   const handleOnAdd = () => {

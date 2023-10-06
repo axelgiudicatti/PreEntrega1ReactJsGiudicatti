@@ -9,7 +9,7 @@ nav {
   width: 2.3vw;
   margin-left: 1rem;
 }
-ul {
+.ul {
   list-style: none;
   display: flex;
   width: 100vw;
@@ -21,7 +21,7 @@ ul {
   margin-left: 1rem;
 }
 
-ul li {
+.ul li {
   font-size: 1.3rem;
   color: white;
   text-transform: uppercase;
@@ -30,7 +30,7 @@ ul li {
   margin: 6px;
 }
 
-ul li:hover {
+.ul li:hover {
   background-color: #476c9b;
   color: white;
   opacity: 1;

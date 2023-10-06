@@ -5,8 +5,4 @@ import "./index.css";
 import { initFirebase } from "./firebase/config.js";
 
 initFirebase();
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);

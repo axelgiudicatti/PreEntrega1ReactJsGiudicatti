@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
+import { useCartContext } from "../../context/CartContext";
 import ItemCount from "../Counter/ItemCount";
 import { Link } from "react-router-dom";
-import { useCartContext } from "../../context/CartContext";
 import "./ItemDetail.css";
-import { useState } from "react";
 
 const ItemDetail = ({ beer }) => {
   const [isCounter, setIsCounter] = useState(true);
