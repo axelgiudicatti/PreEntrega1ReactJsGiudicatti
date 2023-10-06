@@ -27,9 +27,8 @@ export const FormHandlers = () => {
     ) {
       Swal.fire({
         icon: "error",
-        title: "Oops...",
-        text: "Something went wrong!",
-        footer: '<a href="">Why do I have this issue?</a>',
+        title: "Datos inválidos",
+        text: "No te hagas el boludo !",
       });
     } else {
       order.total = totalAmount();
