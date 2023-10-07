@@ -1,12 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
 La pagina construida se trata de un e-commerce. La pagina es practicamente dinamica en su totalidad. Permite el agregado y eliminado de manera fluida de items al carro, e incluye una sumatoria de subtotales y valor total de la compra. El cartwidget permite la correcta visualizacion y actualizacion en tiempo real del total de productos en el mismo.
 Al finalizar la compra, se envia a la base de datos un detalle del pedido que incluye el ID del mismo, los datos del comprador y la totalidad del monto abonado.
 El usuario recibe en pantalla la información de ID correspondiente a su pedido.
