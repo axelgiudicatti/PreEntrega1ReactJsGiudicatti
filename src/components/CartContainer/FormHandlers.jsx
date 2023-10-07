@@ -46,12 +46,16 @@ export const FormHandlers = () => {
           clearCart();
         });
 
-      Swal.fire({
+      const Toast = Swal.mixin({
+        toast: true,
         position: "top-end",
-        icon: "success",
-        title: "Pedido correctamente realizado",
         showConfirmButton: false,
-        timer: 2000,
+        timer: 1500,
+        timerProgressBar: true,
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Procesando tu pedido",
       });
     }
   };

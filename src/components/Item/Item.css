@@ -1,6 +1,5 @@
 input[type="number"] {
   -webkit-appearance: textfield !important;
-  -moz-appearance: textfield !important;
 }
 * {
   margin: 0;
@@ -78,4 +77,8 @@ input::placeholder {
   opacity: 1;
   transition-duration: 700ms;
   transform: scale(1.08);
+}
+
+.color--state-blue {
+  background-color: #274c77;
 }

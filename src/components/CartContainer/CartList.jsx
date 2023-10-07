@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { useCartContext } from "../../context/CartContext";
-
+import { Link } from "react-router-dom";
 export const CartList = () => {
   const { cartList, delBeer, totalAmount, clearCart } = useCartContext();
   return (
@@ -38,6 +37,11 @@ export const CartList = () => {
         <button className="button color--state-bad" onClick={() => clearCart()}>
           Vaciar Carrito
         </button>
+        <Link to="/">
+          <button className="button color--state-blue">
+            Seguir comprando!
+          </button>
+        </Link>
       </div>
     </>
   );

@@ -17,18 +17,26 @@ La aplicación web fue deployada a partir del repositorio en GitHub y se encuent
 
 https://main--delightful-rugelach-62dd35.netlify.app/
 
-Dependencias empleadas:
-"@fortawesome/fontawesome-svg-core": "^6.4.2",
-"@fortawesome/free-solid-svg-icons": "^6.4.2",
-"@fortawesome/react-fontawesome": "^0.2.0",
-"bootstrap": "^5.3.1",
-"firebase": "^10.4.0",
-"react": "^18.2.0",
-"react-bootstrap": "^2.8.0",
-"react-dom": "^18.2.0",
-"react-icons": "^4.10.1",
-"react-router-dom": "^6.15.0",
-"typeface-quicksand": "^1.1.13"
-"sweetalert2": "^11.7.32",
+Librerias externas empleadas:
+
+"@fortawesome/fontawesome-svg-core": "^6.4.2", | tipografia e iconos
+"@fortawesome/free-solid-svg-icons": "^6.4.2", | tipografia e iconos
+"@fortawesome/react-fontawesome": "^0.2.0", | tipografia e iconos
+"bootstrap": "^5.3.1", | diseno y desarrollo de la web, framework
+"firebase": "^10.4.0", | base de datos/backend
+"react": "^18.2.0", | React/dinamica de la web
+"react-bootstrap": "^2.8.0", | diseno y desarollo de la web, framework
+"react-dom": "^18.2.0", | virtual-dom y proceso de renderizado de react
+"react-icons": "^4.10.1", | tipografia e iconos
+"react-router-dom": "^6.15.0", | enrutada de vistas en React
+"typeface-quicksand": "^1.1.13" | tipografia
+"sweetalert2": "^11.7.32", | alertas esteticas, usado para validacion de form
 
 Axel Giudcatti, axel.giudicatti@gmail.com. ig: @axelgiudicatti, linkedin: Axel Giudicatti, X: Axel Giudicatti
+
+git clone https://github.com/axelgiudicatti/PreEntrega1ReactJsGiudicatti.git || CLONADO DEL REPO
+cd ......../PreEntrega1ReactJsGiudicatti || POSICIONAMIENTO EN EL PROYECTO DE MANERA LOCAL
+npm install firebase || INSTALACION DE FIREBASE/BACKEND
+$ npm create vite@latest || CREACION DEL PROYECTO CON VITE, USANDO REACTJS NATIVO
+npm run build || CONSTRUCCION DE LOS ARCHIVOS ESTATICOS DEL SITIO
+npm run dev || SIMULACION LOCAL DEL SITIO
